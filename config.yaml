@@ -1,0 +1,17 @@
+
+task: detect
+mode: train
+model: yolov8n.pt
+data: ./lagartas.yaml
+epochs: 30
+
+imgsz: 1024
+degrees: 0.1 # image rotation (+/- deg)
+translate: 0.2 # image translation (+/- fraction)
+scale: 0.1 # image scale (+/- gain)
+shear: 5.0 # image shear (+/- deg)
+perspective: 0 # image perspective (+/- fraction), range 0-0.001
+flipud: 0.25 # image flip up-down (probability)
+fliplr: 0.25 # image flip left-right (probability)
+mosaic: 0.33 # image mosaic (probability)
+mixup: 0.2 # image mixup (probability)
