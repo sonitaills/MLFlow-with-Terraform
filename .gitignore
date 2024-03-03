@@ -52,6 +52,8 @@ Thumbs.db
 *.jpg
 *.png
 *.txt
+*.zip
+*.cache
 
 .venv/
 runs/
