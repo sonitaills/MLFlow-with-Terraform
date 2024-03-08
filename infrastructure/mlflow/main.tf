@@ -47,7 +47,7 @@ EOF
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("./pem/mlflow.pem")
+    private_key = file("../pem/mlflow.pem")
     host        = self.public_ip
   }
 
