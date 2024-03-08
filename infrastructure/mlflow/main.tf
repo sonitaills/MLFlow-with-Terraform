@@ -35,7 +35,8 @@ sudo apt update
 sudo apt install -y pip
 sudo apt install -y python3-venv
 
-pip install -r /home/ubuntu/requirements.txt
+pip install awscli==1.32.54
+pip install mlflow==2.11.0
 
 echo 'mlflow server -h 0.0.0.0 -p ${var.mlflow_port} --default-artifact-root s3://mlflow-test-23' > /home/ubuntu/mlflow_crontab.sh
 chmod +x /home/ubuntu/mlflow_crontab.sh
@@ -48,11 +49,6 @@ EOF
     user        = "ubuntu"
     private_key = file("./pem/mlflow.pem")
     host        = self.public_ip
-  }
-
-  provisioner "file" {
-    source      = "./mlflow_setup/"
-    destination = "/home/ubuntu/"
   }
 
 }
